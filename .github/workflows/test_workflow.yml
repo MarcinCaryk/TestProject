@@ -24,6 +24,6 @@ jobs:
       - name: check file
         run: |
           pwd
-          ll
+          ls
           cat test.txt
 
