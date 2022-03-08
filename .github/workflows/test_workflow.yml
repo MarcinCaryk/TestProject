@@ -1,0 +1,2 @@
+name: workflow_template
+on: push
