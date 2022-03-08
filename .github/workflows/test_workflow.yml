@@ -23,5 +23,7 @@ jobs:
           name: my-artifact
           path: test.txt    
       - name: check file
-        run: cat test.txt
+        run: |
+          pwd
+          cat test.txt
 
