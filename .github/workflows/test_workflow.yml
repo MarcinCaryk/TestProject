@@ -9,5 +9,16 @@ jobs:
         run: echo "Hello World"
       - name: save to file
         run: echo "1235">test.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: test.txt
+
+  bash_run_check:
+    runs-on: ubuntu-latest
+    steps:
       - name: check file
         run: cat test.txt
+      - uses: actions/download-artifact@v3
+        with:
+          name: my-artifact
