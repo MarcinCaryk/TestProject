@@ -2,6 +2,7 @@ name: workflow_template
 on: [push]
 
 jobs:
+  bash_run:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
