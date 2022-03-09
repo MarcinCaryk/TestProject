@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   bash_run:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: echo a string
         run: echo "Hello World"
