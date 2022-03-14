@@ -1,5 +1,15 @@
 name: workflow_template
-on: [push]
+on: 
+  push:
+  workflow_dispatch:
+    inputs:
+      choice:
+        type: choice
+        description: Make a choice
+        options:
+        - foo
+        - bar
+        - baz
 
 jobs:
   bash_run:
