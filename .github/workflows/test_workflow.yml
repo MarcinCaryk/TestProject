@@ -44,6 +44,8 @@ jobs:
         run: echo ${{ github.ref_name }}
       - name: Ref
         run: echo ${{ github.ref }}
+      - name: Ref
+        run: echo ${{ github.GITHUB_ACTION }}
         
         
         
