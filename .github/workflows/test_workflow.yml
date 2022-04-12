@@ -20,7 +20,7 @@ jobs:
       - name: save to file
         run: | 
           echo "1235">test.txt 
-          test.bat
+          CALL test.bat
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact
