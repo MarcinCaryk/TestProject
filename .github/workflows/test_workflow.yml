@@ -20,7 +20,8 @@ jobs:
       - name: save to file
         run: | 
           echo "1235">test.txt 
-          echo %date%
+          FOR /f "usebackq" %%i IN (`PowerShell ^(Get-Date^).ToString^('yyyy-MM-dd'^)`) DO SET DTime=%%i
+          echo %DTime%
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact
