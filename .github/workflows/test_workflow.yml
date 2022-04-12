@@ -20,7 +20,7 @@ jobs:
       - name: save to file
         run: | 
           echo "1235">test.txt 
-          CALL test.bat
+          echo date /t
         shell: powershell
       - uses: actions/upload-artifact@v3
         with:
