@@ -1,6 +1,11 @@
 name: workflow_template
 on: 
+  schedule:
+    - cron: '0 18 * * 0-5'
   push:
+    branches:
+      main
+      test
   workflow_dispatch:
     inputs:
       choice:
@@ -12,6 +17,7 @@ on:
         - baz
 
 jobs:
+
   bash_run:
     runs-on: windows-latest
     steps:
@@ -30,7 +36,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        brnaches: ["one", "two"]
+       include:
+         - a: x
+           b: "prod"
+           c: "site-a"
+         - a: y
+           b: "dev"
+           c: "site-b"
     needs: ["bash_run"]
     steps:
       - uses: actions/download-artifact@v3
@@ -41,7 +53,9 @@ jobs:
           pwd
           ls
           cat test.txt
-          echo ${{ matrix.brnaches }}
+          echo ${{ matrix.a }}
+          echo ${{ matrix.b }}
+          echo ${{ matrix.c }}
       - name: Output Run ID
         run: echo ${{ github.run_id }}
       - name: Output Run Number
