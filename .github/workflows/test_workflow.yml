@@ -28,6 +28,9 @@ jobs:
 
   bash_run_check:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        brnaches: ["one", "two"]
     needs: ["bash_run"]
     steps:
       - uses: actions/download-artifact@v3
@@ -38,6 +41,7 @@ jobs:
           pwd
           ls
           cat test.txt
+          echo ${{ matrix.brnaches }}
       - name: Output Run ID
         run: echo ${{ github.run_id }}
       - name: Output Run Number
