@@ -1,7 +1,5 @@
 name: workflow_template
 on: 
-  schedule:
-    - cron: '0 18 * * 0-5'
   push:
     branches:
       main
