@@ -55,7 +55,7 @@ jobs:
         run: | 
           echo "Hello World"
           python -V
-          python /.github/scripts/check_test_results.py -jxml /test-results/test.xml
+          python .github/scripts/check_test_results.py -jxml /test-results/test.xml
       - name: check file
         run: |
           pwd
