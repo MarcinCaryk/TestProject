@@ -19,10 +19,13 @@ jobs:
   bash_run:
     runs-on: windows-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: echo a string
         run: | 
           echo "Hello World"
           python -V
+          python /.github/scripts/check_test_results.py -jxml /test-results/test.xml
         
       - name: save to file
         run: | 
