@@ -51,7 +51,12 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: my-artifact  
+          name: my-artifact 
+      - name: echo a string
+        run: | 
+          echo "Hello World"
+          python -V
+          python /.github/scripts/check_test_results.py -jxml /test-results/test.xml
       - name: check file
         run: |
           pwd
