@@ -22,10 +22,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: test other repo
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           repository: MarcinCaryk/test_git_actions
           path: ./test_git_actions
+          ref: v1
       - name: echo a string
         run: | 
           echo "Hello World"
