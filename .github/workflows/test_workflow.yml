@@ -30,7 +30,7 @@ jobs:
       - name: echo a string
         run: | 
           echo "Hello World"
-          tree
+          tree /F
       - name: save to file
         run: | 
           echo "1235">test.txt 
