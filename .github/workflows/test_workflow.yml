@@ -31,6 +31,9 @@ jobs:
         run: | 
           echo "Hello World"
           tree /F
+      - name: rename_remove
+        run: |
+            mv test-results test-results1
       - name: save to file
         run: | 
           echo "1235">test.txt 
