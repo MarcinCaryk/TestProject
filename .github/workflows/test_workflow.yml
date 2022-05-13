@@ -33,7 +33,9 @@ jobs:
           tree /F
       - name: rename_remove
         run: |
-            mv test-results test-results1
+            rm -r test-results
+            mv test-results-1 test-results
+            tree test-results /F
       - name: save to file
         run: | 
           echo "1235">test.txt 
