@@ -36,12 +36,14 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: my-artifact  
+          name: | 
+            my-artifact  
       - name: check file
         run: |
           pwd
           ls
           cat test.txt
+          cat x.xml
       - name: Output Run ID
         run: echo ${{ github.run_id }}
       - name: Output Run Number
