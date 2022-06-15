@@ -49,15 +49,15 @@ jobs:
 
   bash_run_check:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-       include:
-         - a: x
-           b: "prod"
-           c: "site-a"
-         - a: y
-           b: "dev"
-           c: "site-b"
+#     strategy:
+#       matrix:
+#        include:
+#          - a: x
+#            b: "prod"
+#            c: "site-a"
+#          - a: y
+#            b: "dev"
+#            c: "site-b"
     needs: ["bash_run"]
     steps:
       - name: Checkout
@@ -65,29 +65,29 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: my-artifact 
-      - name: echo a string
-        run: | 
-          echo "Hello World"
-          python -V
-          python .github/scripts/check_test_results.py -jxml test-results/test.xml
-      - name: check file
-        run: |
-          pwd
-          ls
-          cat test.txt
-          echo ${{ matrix.a }}
-          echo ${{ matrix.b }}
-          echo ${{ matrix.c }}
-      - name: Output Run ID
-        run: echo ${{ github.run_id }}
-      - name: Output Run Number
-        run: echo ${{ github.run_number }}
-      - name: Ref name
-        run: echo ${{ github.ref_name }}
-      - name: Ref
-        run: echo ${{ github.ref }}
-      - name: Test
-        run: echo ${{ github.github_action }}
+#       - name: echo a string
+#         run: | 
+#           echo "Hello World"
+#           python -V
+#           python .github/scripts/check_test_results.py -jxml test-results/test.xml
+#       - name: check file
+#         run: |
+#           pwd
+#           ls
+#           cat test.txt
+#           echo ${{ matrix.a }}
+#           echo ${{ matrix.b }}
+#           echo ${{ matrix.c }}
+#       - name: Output Run ID
+#         run: echo ${{ github.run_id }}
+#       - name: Output Run Number
+#         run: echo ${{ github.run_number }}
+#       - name: Ref name
+#         run: echo ${{ github.ref_name }}
+#       - name: Ref
+#         run: echo ${{ github.ref }}
+#       - name: Test
+#         run: echo ${{ github.github_action }}
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1
         if: always()
