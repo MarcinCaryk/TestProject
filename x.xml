@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="5" failures="1" disabled="0" errors="0" time="0.002" timestamp="2022-06-15T11:12:57" name="AllTests">
+  <testsuite name="Traingle_Test" tests="5" failures="1" disabled="0" errors="0" time="0.001" timestamp="2022-06-15T11:12:57">
+    <testcase name="Invalid_Sides_Lenght" status="run" result="completed" time="0" timestamp="2022-06-15T11:12:57" classname="Traingle_Test" />
+    <testcase name="Cant_Be_Formed" status="run" result="completed" time="0" timestamp="2022-06-15T11:12:57" classname="Traingle_Test" />
+    <testcase name="Equivalateral" status="run" result="completed" time="0" timestamp="2022-06-15T11:12:57" classname="Traingle_Test" />
+    <testcase name="Isosceles" status="run" result="completed" time="0.001" timestamp="2022-06-15T11:12:57" classname="Traingle_Test">
+      <failure message="/home/yca/Projects/CARIAD_E3_2.0_Integration/repositories/vwos-micro_reference-repo_code/source/gtest/Sample-Test1/Sample-Test1/test.cpp:24&#x0A;Expected equality of these values:&#x0A;  2&#x0A;  TypeOfTriangle(10, 9, 15)&#x0A;    Which is: 3" type=""><![CDATA[/home/yca/Projects/CARIAD_E3_2.0_Integration/repositories/vwos-micro_reference-repo_code/source/gtest/Sample-Test1/Sample-Test1/test.cpp:24
+Expected equality of these values:
+  2
+  TypeOfTriangle(10, 9, 15)
+    Which is: 3]]></failure>
+    </testcase>
+    <testcase name="Scalan" status="run" result="completed" time="0" timestamp="2022-06-15T11:12:57" classname="Traingle_Test" />
+  </testsuite>
+</testsuites>
