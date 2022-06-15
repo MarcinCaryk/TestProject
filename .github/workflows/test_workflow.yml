@@ -1,6 +1,8 @@
 name: workflow_template
 on: 
   push:
+    branches:
+    - test
   workflow_dispatch:
     inputs:
       choice:
