@@ -2,7 +2,6 @@ name: workflow_template
 on: 
   push:
     branches:
-      - main
       - test
   workflow_dispatch:
     inputs:
